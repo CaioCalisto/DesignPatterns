@@ -1,0 +1,275 @@
+Abstract Factory
+
+	Este padrão permite a criação de famílias de objetos relacionados ou 
+dependentes por meio de uma única interface e sem que a classe 
+concreta seja especificada
+	É o mais apropriado quando o número e os tipos gerais de objetos de 
+produtos permanecem constantes, e há diferenças em produtos 
+específicos famílias
+
+Quando usar:
+  - o sistema deve ser independente de qual produto será criado e representado
+  - o sistema deve ser configurado com uma familia de produto multiplo
+  - uma família de objetos de produtos relacionados é projetada para ser 
+		usada em conjunto e você precisa impor essa restrição
+  - voce quer prover uma library de produtos e voce quer revelar apenas 
+		suas interfaces
+
+******************************************************************************
+
+Adapter
+
+	Converte uma interface em outra interface que o cliente espera
+    Adapter deixa as classes trabalharem juntas mesmo não tendo interface 
+compativel
+
+Quando usar:
+  - voce quer usar uma classe existente, e sua interface não 
+		corresponde com a interface que voce precisa
+  - voce quer criar uma classe reutilizavel que coopera com 
+		uma classe não relacionada, e sua classe não necessariamente
+		tem interface compativel
+  - voce precisa usar varias subclasses existente, mas não 
+		consegue deixar todas elas em uma unica interface
+		
+******************************************************************************		
+
+Balking
+	
+	Executa uma ação somente se o objeto estiver em um determinado estado
+	
+******************************************************************************		
+
+Bridge
+
+	Desacopla a abstração de sua implementação e então eles podem 
+variar independentemente
+
+Quando usar:
+ - voce quer evitar uma ligação obrigatoria entre a abstração
+      e a implementação. Isso pode ser o caso, por exemplo, quando 
+      a implementação deve selecionar em run-time
+ - ambas as abstrações e implementações devem ser extendivel por subclasses.
+ - mudanças na implementação da abstração não devem impactar o cliente
+ - voce quer esconder a implementação da abstração do seu cliente
+
+******************************************************************************		
+
+Builder
+ 
+	Separe a construção de um objeto complexo de sua representação 
+para que o mesmo processo de construção possa criar diferentes 
+representações
+
+Quando usar
+ - o algoritmo de criar o objeto complexo deve ser independente das 
+		partes que compõe o objeto e como ele será formado
+ - o processo de construção deve permitir diferentes representações
+		para o objeto que será construido
+		
+*****************************************************************************		
+
+Business Delegate
+
+	Desacopla a camada de apresentação da camada de negócio
+	
+*****************************************************************************		
+
+CallBack
+
+	Para execuções assincronas.
+	Two kinds:
+		blocking callbacks (also known as synchronous callbacks or just callbacks) 
+		deferred callbacks (also known as asynchronous callbacks
+
+*****************************************************************************		
+
+Chain of Responsability
+
+	Evita acoplar o remetente com seu receptor dando mais de um objeto para
+lidar com a requisição
+
+Quando usar:
+ - mais de 1 objeto pode lidar com a requisição
+ - voce quer deixar varios objetos disponiveis sem especificar qual 
+     será realmente o receptor
+	 
+*****************************************************************************		
+
+CircuitBreaker
+		
+	Você envolve uma chamada de função protegida em um objeto disjuntor, 
+que monitora as falhas. Uma vez que as falhas atingem um certo limite, o 
+disjuntor dispara e todas as novas chamadas para o disjuntor retornam com 
+um erro, sem que a chamada protegida seja feita. Normalmente, você também 
+quer algum tipo de alerta de monitor se o disjuntor disparar.
+
+*****************************************************************************		
+
+Command
+
+	Encapsular a requisição como 1 objeto, permitindo parametrizar clientes 
+com diferentes requisições e filas, suportando a operação REFAZER
+    	   
+*****************************************************************************		
+
+Composite
+
+	Compoe objetos em estruturas de arvores para representar uma hierarquia
+
+Quando usar:
+  - voce quer representar uma hierarquia de objetos
+  - voce quer que os clientes sejam capazes de ignorar diferencas entre 
+		composicao de objetos e objetos individuais. Clientes tratarão 
+		todos os objetos em umaestrutura uniformemente	  
+		
+*****************************************************************************		
+
+Decorator
+
+	Anexa responsabilidades adicionais para o objeto dinamicamente. Disponibiliza 
+alternativas flexiveis para extender funcionalidades
+
+Quando usar:
+ - Para adicionar responsabilidade para objetos individuais dinamicamente e 
+     transparentemente, sem afetar outros objetos
+ - para responsabilidades que podem ser retirados
+ - quando extender uma subclasse não for possivel. Algumas vezes extender 
+		subclasses irá gerar MUITAS subclasses para todas as combinacoes, 
+		entao nesse caso usamos DECORATOR
+		
+*****************************************************************************		
+
+Facade
+
+	Prove uma interface unica para varias interfaces. Facade define uma interface de 
+alto nivel que faz com que os subsistemas sejam faceis de utilizar
+
+Quando usar:
+ - voce quer prover uma simples interface para um subsistema complexo.
+      Subsistemas geralmente mais complexos evoluem, e muitas classes pequenas são
+      criadas, tornando o sistema dificil de ser utilizada
+ - existem muitas dependencias entre cliente e implementações de abstração.
+ - voce quer criar camadas no seu subsistema. Facade ira definir uma entrada para cada
+      nivel do subsistema.		
+
+*****************************************************************************		
+
+Factory
+
+	Defina uma interface para criar um objeto, mas deixe 
+subclasses decidir qual classe instanciar. Factory method 
+permite que uma classe adie a instanciação para subclasses
+
+Quando usar
+  - a classe não pode antecipar a classe objeto que deve ser criada
+  - a classe quer subclasses para especificar o objeto que será criado
+  - delegação de responsabilidade para um Helper, que localizará a subclasse delegada		
+		
+*****************************************************************************		
+
+Flyweight
+
+	Usa compartilhamento para suportar grande numero de 
+objetos pequenos eficientemente
+
+Quando usar:
+ - Quando a aplicação tem grande numero de objetos
+ - custo de armazenamento alto 
+ - muitos stados dos objetos podem ser extrínseco
+ - muitos grupos de objetos podem ser recolocados por outros
+ - a aplicação nao depende do ID do objeto.
+		
+*****************************************************************************		
+
+Interpreter
+
+	Dada uma linguagem, ele será interpretada
+    
+Utilizar:
+   - quando a gramatica é simples
+   - eficiencia não é uma preocupacao		
+   
+*****************************************************************************		
+
+Iterator
+
+	Prove uma maneira de acessar elementos de um objeto agregado sequencialmente
+sem expor sua representação
+
+Usar quando:
+ - para acessar conteudo de objeto agregado sem expor representação interna
+ - para suportar mutiplos traversos de objeto agregado
+ - prove interface uniforme para estrutura de traversos agregados diferentes
+   
+*****************************************************************************		
+
+Mediator
+
+	Define um objeto que encapsula como determinados objetos se interagem
+    Mediator promove baixo acoplamento por manter ligação de forma explicita, 
+e deixar eles interagirem independentemente
+
+Quando usar:
+ - conjunto de objetos se comunicam de forma bem definida mas complexa
+      O resultado, caso não use o Mediator, será dificil de entender
+ - reutilizar objetos é dificil por que ele se comunica com varios objetos
+ - o comportamento que é distribuido entre varias classes poderia 
+      ser customizavel sem o montante de subclasses  
+
+*****************************************************************************		
+
+Memento
+
+	Sem violar encapsulamento, captura e externaliza um 
+estado de objeto interno e entao este objeto pode ser restaurado
+para um estado anterior
+
+Quando usar:
+ - um Snapshot de um objeto deve ser salvo para ser restaurado depois
+ - uma interface direta para obter um estado iria expor detalhes
+    da implementação e quebrar o encapsulamento
+	  
+*****************************************************************************		
+
+Multi-ton
+
+	  O padrão de design Multiton é uma extensão do padrão singleton. 
+	  Ele garante que um número limitado de instâncias de uma classe pode 
+existir especificando uma chave para cada instância e permitindo que apenas 
+um único objeto seja criado para cada uma dessas chaves
+
+*****************************************************************************		
+
+Null Object
+
+	Permite retornar um objeto sem valor, ao invés de retornar Null
+	
+*****************************************************************************		
+
+Observer
+
+	Define uma dependencia 1-Muitos assim quando 1 objeto muda, seus
+dependentes são notificados e atualizados
+
+Quando usar:
+ - quando a abstração tem 2 aspectos, um depende do outro. Encapsulando
+     estes aspectos em objetos separados deixa voce reusá-los independetemente
+ - quando uma mudança em um objeto requer mudanças em outros, e voce
+     não sabe quantos objetos precisam ser mudados
+ - quando um objeto deveria ser ter permissão de notificar outros sem
+     acoplamentos
+	
+*****************************************************************************		
+
+Prototype
+
+	Especifica o tipo de objeto a criar usando usando clone, copiando do protótipo
+         
+Quando usar:
+   - quando as classes para instanciar são especificadas em run-time (ex: dynamic loading)
+   - para evitar criar hierarquia de classes igualar com hierarquia de produtos
+   - quando as instâncias de uma classe podem ter uma das únicas combinações 
+       de estados diferentes. Pode ser mais conveniente instalar um número correspondente 
+       de protótipos e cloná-los em vez de instanciar a classe manualmente, cada um com 
+       seu proprio estado	

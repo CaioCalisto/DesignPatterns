@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CircuitBreaker", "CircuitBreaker\CircuitBreaker.csproj", "{6B4CF1E5-1B8E-495D-AA49-4AA5AAE53BEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B4CF1E5-1B8E-495D-AA49-4AA5AAE53BEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B4CF1E5-1B8E-495D-AA49-4AA5AAE53BEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B4CF1E5-1B8E-495D-AA49-4AA5AAE53BEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B4CF1E5-1B8E-495D-AA49-4AA5AAE53BEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6414606D-ED35-410C-B65A-4B2383C89BD5}
+	EndGlobalSection
+EndGlobal
