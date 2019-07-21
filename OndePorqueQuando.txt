@@ -273,3 +273,23 @@ Quando usar:
        de estados diferentes. Pode ser mais conveniente instalar um número correspondente 
        de protótipos e cloná-los em vez de instanciar a classe manualmente, cada um com 
        seu proprio estado	
+	   
+*****************************************************************************	
+
+Visitor
+	   
+	   
+	Representar uma operação para ser rodada nos elementos de uma
+        estrutura de objetos. Visitor deixa voce definir uma nova operação
+        sem mudar as classes dos elementos que ela opera
+
+        Quando usar:
+        - uma estrutura de objeto contem muitas classes de objetos 
+            com diferentes interfaces, e voce quer rodar operações nestes
+            objetos que dependem de suas classes concretas
+        - muitas operações distintas e não relacionadas precisam rodar
+            em uma estrutura de objeto, e voce quer evitar poluir essas
+            classes com essas operações. Visitor deixa voce manter
+            operações relacionadas juntas definindo elas em uma classe.
+        - classe que define a estrutura raramente muda, mas voce frequentemente
+            quer definir uma nova operação na estrutura.
